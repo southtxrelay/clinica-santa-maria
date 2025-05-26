@@ -5,7 +5,8 @@
     <title>Clinica Santa Maria – OB-GYN in Brownsville, TX</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Understanding your annual OB-GYN exam. Learn what Brownsville women should expect during a routine visit to Clinica Santa Maria.">
-   
+    <link rel="canonical" href="https://www.clinicasantamaria.us/" />
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -24,6 +25,10 @@
             margin: 30px 0;
             text-align: center;
         }
+        .map-embed {
+            margin: 30px 0;
+            text-align: center;
+        }
         footer {
             font-size: 0.9em;
             color: #666;
@@ -31,24 +36,48 @@
             margin-top: 40px;
         }
     </style>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalOrganization",
-      "name": "Clinica Santa Maria",
-      "url": "https://www.clinicasantamaria.us",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Brownsville",
-        "addressRegion": "TX",
-        "postalCode": "78521",
-        "streetAddress": "956 Price Road"
-      },
-      "sameAs": [
-        "https://sites.google.com/view/clincia-santa-maria-price-rd/home",
-        "https://www.google.com/maps?cid=9673572659300532584"
-      ],
-      "medicalSpecialty": "Obstetrics and Gynecology"
+      "@graph": [
+        {
+          "@type": "MedicalOrganization",
+          "@id": "https://www.clinicasantamaria.us/#price",
+          "name": "Clinica Santa Maria – Price Rd",
+          "url": "https://www.clinicasantamaria.us",
+          "medicalSpecialty": "Obstetrics and Gynecology",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "956 Price Road",
+            "addressLocality": "Brownsville",
+            "addressRegion": "TX",
+            "postalCode": "78521",
+            "addressCountry": "US"
+          },
+          "sameAs": [
+            "https://www.google.com/maps?cid=9673572659300532584"
+          ]
+        },
+        {
+          "@type": "MedicalOrganization",
+          "@id": "https://www.clinicasantamaria.us/#southmost",
+          "name": "Clinica Santa Maria – Southmost Rd",
+          "url": "https://www.clinicasantamaria.us",
+          "medicalSpecialty": "Obstetrics and Gynecology",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "3308 Southmost Road",
+            "addressLocality": "Brownsville",
+            "addressRegion": "TX",
+            "postalCode": "78521",
+            "addressCountry": "US"
+          },
+          "sameAs": [
+            "https://www.google.com/maps?cid=8005344288662457165"
+          ]
+        }
+      ]
     }
     </script>
 </head>
@@ -74,8 +103,18 @@
         <p><a href="https://www.clinicasantamaria.us" target="_blank">Visit our official website to schedule your appointment</a></p>
     </div>
 
+    <p>Need directions? <a href="https://www.google.com/maps?cid=9673572659300532584" target="_blank">Find our Price Rd location on Google Maps</a></p>
+    <p>Or visit our other clinic: <a href="https://www.google.com/maps?cid=8005344288662457165" target="_blank">Find our Southmost Rd location on Google Maps</a></p>
 
-    <p>Need directions? <a href="https://www.google.com/maps?cid=9673572659300532584" target="_blank">Find us on Google Maps</a></p>
+    <div class="map-embed">
+        <h3>Our Price Rd Location</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57409.26429350489!2d-97.54071004179687!3d25.932630099999983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866f95d00bc51b5d%3A0x863f6f14b28a0168!2sClinica%20Santa%20Maria%20-%20Price%20Rd!5e0!3m2!1sen!2sus!4v1748264743024!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="map-embed">
+        <h3>Our Southmost Rd Location</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57425.24130729879!2d-97.52303784179684!3d25.899819999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866f959dc8280b2d%3A0x6f18b237666d8b4d!2sClinica%20Santa%20Maria%20-%20Southmost%20Rd!5e0!3m2!1sen!2sus!4v1748264802339!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
 
     <footer>
         <p>&copy; 2025 Clinica Santa Maria. All rights reserved.</p>
