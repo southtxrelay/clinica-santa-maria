@@ -1,123 +1,814 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Clinica Santa Maria – OB-GYN in Brownsville, TX</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Understanding your annual OB-GYN exam. Learn what Brownsville women should expect during a routine visit to Clinica Santa Maria.">
-    <link rel="canonical" href="https://southtxrelay.github.io/clinica-santa-maria/">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clinica Santa Maria - Women's Health Care in Brownsville, TX</title>
+<meta content="Comprehensive women's health care in Brownsville, TX. OB-GYN exams, Pap smears, contraceptive counseling, bilingual care. Two convenient locations." name="description"/>
+<meta content="OB-GYN Brownsville, women's health Brownsville TX, Pap smear, contraceptive counseling, bilingual healthcare" name="keywords"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            max-width: 800px;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 40px;
+            padding: 0 20px;
         }
+
+        /* Header */
         header {
+            background: #ffffff;
+            color: #333;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .header-contact {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .phone-number {
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .bilingual-badge {
+            background: #f9f5dd;
+            color: #333;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: #f9f5dd;
+            color: #333;
+            padding: 120px 0 80px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(205, 243, 255, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(205, 243, 255, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 40% 60%, rgba(205, 243, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: none;
+            background: linear-gradient(135deg, #333, #666);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: #333;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.8;
+            font-weight: 500;
+            color: #555;
+        }
+
+        .hero .description {
+            font-size: 1.1rem;
             margin-bottom: 40px;
-        }
-        .cta {
-            background-color: #f0f0f0;
-            padding: 15px;
-            margin: 30px 0;
-            text-align: center;
-        }
-        .map-embed {
-            margin: 30px 0;
-            text-align: center;
-        }
-        footer {
-            font-size: 0.9em;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
             color: #666;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: #cdf3ff;
+            color: #333;
+            box-shadow: 0 4px 15px rgba(205, 243, 255, 0.4);
+            border: 2px solid #cdf3ff;
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            background: #333;
+            color: #ffffff;
+            border-color: #333;
+            box-shadow: 0 8px 25px rgba(51, 51, 51, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #333;
+            border: 2px solid #333;
+            font-weight: 600;
+        }
+
+        .btn-secondary:hover {
+            background: #cdf3ff;
+            color: #333;
+            border-color: #cdf3ff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(205, 243, 255, 0.4);
+        }
+
+        /* Trust Indicators */
+        .trust-section {
+            background: white;
+            padding: 40px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .trust-indicators {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
             text-align: center;
+        }
+
+        .trust-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .trust-item i {
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        .trust-item h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .trust-item p {
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: #f9f5dd;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: #6b7280;
+            margin-bottom: 20px;
+        }
+
+        .service-card .btn {
+            font-size: 1rem;
+            padding: 12px 25px;
+        }
+
+        /* Why Choose Us */
+        .why-choose {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: #cdf3ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            margin: 0 auto 20px;
+        }
+
+        .feature-icon i {
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .feature-item h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* Appointment Section */
+        .appointment {
+            background: #cdf3ff;
+            color: #333;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .appointment h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .appointment p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .appointment-link {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #333;
+            display: inline-block;
+            padding: 15px 30px;
+            background: #f9f5dd;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .appointment-link:hover {
+            background: #ffffff;
+            transform: scale(1.05);
+        }
+
+        /* Locations */
+        .locations {
+            padding: 80px 0;
+            background: #f9f5dd;
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .location-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .location-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .location-card .btn {
+            margin-top: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background: #cdf3ff;
+            color: #333;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-section h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .footer-section p, .footer-section li {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #666;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
             margin-top: 40px;
+            padding-top: 20px;
+            text-align: center;
+            color: #666;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .header-contact {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .appointment-link {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Floating Action Button */
+        .fab {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(45deg, #cdf3ff, #f9f5dd);
+            color: #333;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(205, 243, 255, 0.4);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .fab:hover {
+            transform: translateY(-5px) scale(1.1);
+            background: #ffffff;
+            box-shadow: 0 8px 30px rgba(255, 255, 255, 0.5);
         }
     </style>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "MedicalOrganization",
-          "@id": "https://www.clinicasantamaria.us/#price",
-          "name": "Clinica Santa Maria – Price Rd",
-          "url": "https://www.clinicasantamaria.us",
-          "medicalSpecialty": "Obstetrics and Gynecology",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "95 E Price Rd",
-            "addressLocality": "Brownsville",
-            "addressRegion": "TX",
-            "postalCode": "78521",
-            "addressCountry": "US"
-          },
-          "sameAs": [
-            "https://www.google.com/maps?cid=9673572659300532584"
-          ]
-        },
-        {
-          "@type": "MedicalOrganization",
-          "@id": "https://www.clinicasantamaria.us/#southmost",
-          "name": "Clinica Santa Maria – Southmost Rd",
-          "url": "https://www.clinicasantamaria.us",
-          "medicalSpecialty": "Obstetrics and Gynecology",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "3855 Southmost Rd",
-            "addressLocality": "Brownsville",
-            "addressRegion": "TX",
-            "postalCode": "78521",
-            "addressCountry": "US"
-          },
-          "sameAs": [
-            "https://www.google.com/maps?cid=8005344288662457165"
-          ]
-        }
-      ]
-    }
-    </script>
-</head>
+<link href="https://southtxrelay.github.io/clinica-santa-maria/" rel="canonical"/></head>
 <body>
-    <header>
-        <h1>Understanding Your Annual OB-GYN Exam</h1>
-        <h2>What Brownsville Women Should Expect</h2>
-    </header>
-
-    <p>At <strong>Clinica Santa Maria</strong>, we’re dedicated to supporting women’s health in every stage of life. Your annual OB-GYN exam is a cornerstone of preventive care. Here’s what you can expect when you visit our Brownsville, TX clinic:</p>
-
-    <ul>
-        <li>Pelvic and breast exams</li>
-        <li>Pap smears and HPV testing</li>
-        <li>Contraceptive counseling</li>
-        <li>Menstrual health and menopause guidance</li>
-    </ul>
-
-    <p>We tailor every visit to your unique needs, offering compassionate, bilingual care in a comfortable setting. Our team is here to listen, educate, and support you at every step.</p>
-
-    <div class="cta">
-        <p><strong>Ready to take the next step?</strong></p>
-        <p><a href="https://www.clinicasantamaria.us/clinica-santa-maria" target="_blank">Visit our official website to schedule your appointment</a></p>
-    </div>
-
-    <p>Need directions? <a href="https://www.google.com/maps?cid=9673572659300532584" target="_blank">Find our Price Rd location on Google Maps</a></p>
-    <p>Or visit our other clinic: <a href="https://www.google.com/maps?cid=8005344288662457165" target="_blank">Find our Southmost Rd location on Google Maps</a></p>
-
-    <div class="map-embed">
-        <h3>Our Price Rd Location</h3>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57409.26429350489!2d-97.54071004179687!3d25.932630099999983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866f95d00bc51b5d%3A0x863f6f14b28a0168!2sClinica%20Santa%20Maria%20-%20Price%20Rd!5e0!3m2!1sen!2sus!4v1748264743024!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-
-    <div class="map-embed">
-        <h3>Our Southmost Rd Location</h3>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57425.24130729879!2d-97.52303784179684!3d25.899819999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866f959dc8280b2d%3A0x6f18b237666d8b4d!2sClinica%20Santa%20Maria%20-%20Southmost%20Rd!5e0!3m2!1sen!2sus!4v1748264802339!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 Clinica Santa Maria. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+<!-- Header -->
+<header>
+<div class="container">
+<div class="header-content">
+<div class="logo">
+<h1>Clinica Santa Maria</h1>
+</div>
+<div class="header-contact">
+<div class="bilingual-badge">Bilingual Care</div>
+<a class="phone-number" href="https://www.clinicasantamaria.us/clinica-santa-maria">
+<i class="fas fa-calendar-check"></i>
+                        Schedule Appointment
+                    </a>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero">
+<div class="container">
+<div class="hero-content">
+<h1>Women's Health Care in Brownsville</h1>
+<p class="subtitle">Compassionate, Bilingual OB-GYN Services</p>
+<p class="description">
+                    At Clinica Santa Maria, we're dedicated to supporting women's health in every stage of life. 
+                    Your annual OB-GYN exam is a cornerstone of preventive care, and we provide comprehensive 
+                    women's health services in a comfortable, welcoming environment.
+                </p>
+<div class="cta-buttons">
+<a class="btn btn-primary" href="https://www.clinicasantamaria.us/clinica-santa-maria">
+<i class="fas fa-calendar-check"></i>
+                        Schedule Your Exam
+                    </a>
+<a class="btn btn-secondary" href="#services">
+<i class="fas fa-heart"></i>
+                        Our Services
+                    </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Indicators -->
+<section class="trust-section">
+<div class="container">
+<div class="trust-indicators">
+<div class="trust-item">
+<i class="fas fa-user-md"></i>
+<h3>Expert OB-GYN Care</h3>
+<p>Experienced physicians</p>
+</div>
+<div class="trust-item">
+<i class="fas fa-comments"></i>
+<h3>Bilingual Services</h3>
+<p>English &amp; Spanish</p>
+</div>
+<div class="trust-item">
+<i class="fas fa-map-marker-alt"></i>
+<h3>Two Locations</h3>
+<p>Convenient in Brownsville</p>
+</div>
+<div class="trust-item">
+<i class="fas fa-heart"></i>
+<h3>Compassionate Care</h3>
+<p>Personalized approach</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="services" id="services">
+<div class="container">
+<div class="section-title">
+<h2>Comprehensive Women's Health Services</h2>
+<p>What you can expect when you visit our Brownsville, TX clinic for your annual OB-GYN exam</p>
+</div>
+<div class="services-grid">
+<div class="service-card">
+<i class="fas fa-stethoscope"></i>
+<h3>Pelvic &amp; Breast Exams</h3>
+<p>Comprehensive physical examinations to monitor your reproductive and overall health.</p>
+<a class="btn btn-primary" href="https://www.clinicasantamaria.us/clinica-santa-maria">Learn More</a>
+</div>
+<div class="service-card">
+<i class="fas fa-microscope"></i>
+<h3>Pap Smears &amp; HPV Testing</h3>
+<p>Essential screening tests for cervical cancer prevention and early detection.</p>
+<a class="btn btn-primary" href="https://www.clinicasantamaria.us/clinica-santa-maria">Learn More</a>
+</div>
+<div class="service-card">
+<i class="fas fa-pills"></i>
+<h3>Contraceptive Counseling</h3>
+<p>Personalized guidance on birth control options to fit your lifestyle and needs.</p>
+<a class="btn btn-primary" href="https://www.clinicasantamaria.us/clinica-santa-maria">Learn More</a>
+</div>
+<div class="service-card">
+<i class="fas fa-calendar-alt"></i>
+<h3>Menstrual Health</h3>
+<p>Expert care for menstrual irregularities and reproductive health concerns.</p>
+<a class="btn btn-primary" href="https://www.clinicasantamaria.us/clinica-santa-maria">Learn More</a>
+</div>
+<div class="service-card">
+<i class="fas fa-female"></i>
+<h3>Menopause Guidance</h3>
+<p>Support and treatment options to help you navigate this natural life transition.</p>
+<a class="btn btn-primary" href="https://www.clinicasantamaria.us/clinica-santa-maria">Learn More</a>
+</div>
+<div class="service-card">
+<i class="fas fa-baby"></i>
+<h3>Prenatal Care</h3>
+<p>Comprehensive care throughout your pregnancy journey for you and your baby.</p>
+<a class="btn btn-primary" href="https://www.clinicasantamaria.us/clinica-santa-maria">Learn More</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="why-choose">
+<div class="container">
+<div class="section-title">
+<h2>Why Choose Clinica Santa Maria</h2>
+<p>We tailor every visit to your unique needs, offering compassionate, bilingual care in a comfortable setting</p>
+</div>
+<div class="features-grid">
+<div class="feature-item">
+<div class="feature-icon">
+<i class="fas fa-language"></i>
+</div>
+<h3>Bilingual Care</h3>
+<p>Our team speaks both English and Spanish to ensure clear communication and comfort.</p>
+</div>
+<div class="feature-item">
+<div class="feature-icon">
+<i class="fas fa-heart"></i>
+</div>
+<h3>Compassionate Approach</h3>
+<p>We listen, educate, and support you at every step of your healthcare journey.</p>
+</div>
+<div class="feature-item">
+<div class="feature-icon">
+<i class="fas fa-user-friends"></i>
+</div>
+<h3>Personalized Care</h3>
+<p>Every visit is tailored to your unique needs and health concerns.</p>
+</div>
+<div class="feature-item">
+<div class="feature-icon">
+<i class="fas fa-home"></i>
+</div>
+<h3>Comfortable Setting</h3>
+<p>Our welcoming environment helps you feel relaxed and at ease during your visit.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Appointment Section -->
+<section class="appointment">
+<div class="container">
+<h2>Ready to Take the Next Step?</h2>
+<p>Schedule your annual OB-GYN exam with our caring team of professionals.</p>
+<a class="appointment-link" href="https://www.clinicasantamaria.us/clinica-santa-maria">Schedule Your Appointment</a>
+<p>Your health is our priority - let us support you every step of the way</p>
+</div>
+</section>
+<!-- Locations -->
+<section class="locations">
+<div class="container">
+<div class="section-title">
+<h2>Our Convenient Locations</h2>
+<p>Two locations in Brownsville to serve you better</p>
+</div>
+<div class="locations-grid">
+<div class="location-card">
+<h3>Price Rd Location</h3>
+<p><i class="fas fa-map-marker-alt"></i> Our main clinic on Price Road</p>
+<p>Comprehensive women's health services available</p>
+<a class="btn btn-primary" href="https://www.google.com/maps?cid=9673572659300532584">
+<i class="fas fa-directions"></i>
+                        Get Directions
+                    </a>
+</div>
+<div class="location-card">
+<h3>Southmost Rd Location</h3>
+<p><i class="fas fa-map-marker-alt"></i> Our convenient Southmost Road clinic</p>
+<p>Full range of OB-GYN services available</p>
+<a class="btn btn-primary" href="https://www.google.com/maps?cid=8005344288662457165">
+<i class="fas fa-directions"></i>
+                        Get Directions
+                    </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer>
+<div class="container">
+<div class="footer-content">
+<div class="footer-section">
+<h3>Contact Information</h3>
+<p><i class="fas fa-globe"></i> <a href="https://www.clinicasantamaria.us/clinica-santa-maria" style="color: #333;">Schedule Online</a></p>
+<p><i class="fas fa-map-marker-alt"></i> Two convenient locations in Brownsville, TX</p>
+<p><i class="fas fa-language"></i> Bilingual services available</p>
+</div>
+<div class="footer-section">
+<h3>Services</h3>
+<ul>
+<li><a href="#">Annual OB-GYN Exams</a></li>
+<li><a href="#">Pap Smears &amp; HPV Testing</a></li>
+<li><a href="#">Contraceptive Counseling</a></li>
+<li><a href="#">Menstrual Health</a></li>
+<li><a href="#">Menopause Care</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>Our Locations</h3>
+<ul>
+<li><a href="https://www.google.com/maps?cid=9673572659300532584">Price Rd Clinic</a></li>
+<li><a href="https://www.google.com/maps?cid=8005344288662457165">Southmost Rd Clinic</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>Why Choose Us</h3>
+<p><strong>Compassionate Care:</strong><br/>We listen, educate, and support you</p>
+<p><strong>Bilingual Services:</strong><br/>English and Spanish speaking staff</p>
+<p><strong>Personalized Approach:</strong><br/>Tailored to your unique needs</p>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2025 Clinica Santa Maria. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<!-- Floating Action Button -->
+<a class="fab" href="https://www.clinicasantamaria.us/clinica-santa-maria" title="Schedule Appointment">
+<i class="fas fa-calendar-check"></i>
+</a>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "clinica-santa-maria-handoff",
+  "name": "Clinica Santa Maria",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Brownsville",
+    "addressRegion": "TX",
+    "addressCountry": "US"
+  },
+  "department": [
+    {
+      "@type": "MedicalBusiness",
+      "name": "Clinica Santa Maria \u2013 Price Rd",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "95 E Price Rd",
+        "addressLocality": "Brownsville",
+        "addressRegion": "TX",
+        "postalCode": "78521",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "MedicalBusiness",
+      "name": "Clinica Santa Maria \u2013 Southmost Rd",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3855 Southmost Rd",
+        "addressLocality": "Brownsville",
+        "addressRegion": "TX",
+        "postalCode": "78521",
+        "addressCountry": "US"
+      }
+    }
+  ]
+}</script></body>
+</html> 
